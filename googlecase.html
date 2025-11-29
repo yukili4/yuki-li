@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google - Case Study | Yuki Li</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&family=Ubuntu+Condensed&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chasecase.css">
+    <style>
+        .overview-paragraphs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 0 !important;
+            margin-bottom: 2rem;
+            padding-top: 0 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs {
+                gap: 3rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .overview-paragraphs p {
+            font-family: 'Ubuntu Sans', sans-serif;
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 0 !important;
+            margin-bottom: 0;
+            padding-top: 0 !important;
+            max-width: 100%;
+        }
+        
+        .overview-paragraphs p:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs p {
+                max-width: 550px;
+            }
+        }
+        
+        .section-body {
+            color: #ffffff;
+        }
+        
+        .section-grid {
+            display: grid !important;
+            align-items: start !important;
+            justify-items: start !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            text-align: left !important;
+            width: 100% !important;
+            max-width: 1300px !important;
+        }
+        
+        @media (min-width: 768px) {
+            .section-grid {
+                grid-template-columns: repeat(12, 1fr) !important;
+                align-items: start !important;
+                justify-items: start !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                text-align: left !important;
+            }
+            
+            .section-header {
+                grid-column: span 3 !important;
+                position: relative !important;
+                top: 0 !important;
+                align-self: start !important;
+                justify-self: start !important;
+                display: flex !important;
+                flex-direction: column !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                text-align: left !important;
+            }
+            
+            .section-body {
+                grid-column: span 9 !important;
+                align-self: start !important;
+                justify-self: start !important;
+                display: flex !important;
+                flex-direction: column !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                text-align: left !important;
+            }
+        }
+        
+        .chasecase-section .section-title {
+            font-style: normal;
+            font-family: 'Ubuntu Sans', sans-serif;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            line-height: 1.5 !important;
+            opacity: 1 !important;
+        }
+        
+        .overview-paragraphs p:first-child {
+            margin-top: 0 !important;
+            padding-top: 4px !important;
+            line-height: 1.5 !important;
+        }
+        
+        .section-header,
+        .section-body {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+        }
+        
+        @media (min-width: 768px) {
+            .section-header h2.section-title {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+            
+            .overview-paragraphs {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+        }
+        
+        .section-header {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .section-header h2 {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            line-height: 1.5 !important;
+        }
+        
+        .section-header p {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .section-body {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        
+        .section-body > * {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .overview-paragraphs {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .overview-paragraphs p:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .section-body .overview-paragraphs:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .section-body > div:last-child {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .center-button {
+            opacity: 1 !important;
+        }
+        
+        .center-button:hover {
+            color: #a1a1aa !important;
+        }
+        
+        .center-button:hover svg {
+            color: #a1a1aa !important;
+        }
+        
+        /* Replace Inter font with Ubuntu Sans */
+        .chasecase-article {
+            font-family: 'Ubuntu Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+            font-weight: 500 !important;
+        }
+        
+        .metadata-item p {
+            font-family: 'Ubuntu Sans', sans-serif !important;
+            font-weight: 500 !important;
+        }
+        
+        .type-name {
+            font-family: 'Ubuntu Sans', sans-serif !important;
+            font-weight: 500 !important;
+        }
+        
+        .phone-screen {
+            font-family: 'Ubuntu Sans', sans-serif !important;
+            font-weight: 500 !important;
+        }
+        
+        .back-link {
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            border-radius: 9999px !important;
+            padding: 0.75rem 1.5rem !important;
+            background: rgba(17, 17, 17, 0.85) !important;
+            backdrop-filter: blur(12px) !important;
+        }
+        
+        .back-link:hover {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+        
+        .yl-button-container {
+            position: absolute;
+            top: 2rem;
+            right: 1.5rem;
+            z-index: 50;
+        }
+        
+        @media (min-width: 768px) {
+            .yl-button-container {
+                top: 3rem;
+                right: 3rem;
+            }
+        }
+        
+        .chasecase-content {
+            max-width: 1300px !important;
+            padding-top: 3rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .chasecase-content {
+                padding-top: 4rem !important;
+            }
+        }
+        
+        .metadata-content {
+            max-width: 1300px !important;
+        }
+        
+        .metadata-item {
+            text-align: left !important;
+            width: 100% !important;
+        }
+        
+        .metadata-item h4 {
+            text-align: left !important;
+        }
+        
+        .metadata-item p {
+            text-align: left !important;
+        }
+        
+        .metadata-content {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+        
+        .metadata-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 1rem;
+            width: 100%;
+            max-width: 1300px;
+        }
+        
+        @media (min-width: 768px) {
+            .metadata-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem 1rem;
+            }
+        }
+        
+        .section-grid {
+            gap: 0.75rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .section-grid {
+                gap: 1rem !important;
+            }
+        }
+        
+        .chasecase-section {
+            margin-bottom: 0 !important;
+        }
+        
+        .chasecase-content {
+            padding-bottom: 2rem !important;
+        }
+        
+        .chasecase-section {
+            padding-bottom: 2rem !important;
+        }
+        
+        .chasecase-article {
+            padding-bottom: 0 !important;
+        }
+        
+        .chasecase-hero {
+            position: relative;
+            min-height: 80vh;
+            height: 80vh;
+            background-image: url('../Portfolio/Covers/Google.png') !important;
+            background-size: cover !important;
+            background-position: center top !important;
+            background-repeat: no-repeat !important;
+            background-color: #F3F3F3 !important;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 768px) {
+            .chasecase-hero {
+                min-height: 90vh;
+                height: 90vh;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .chasecase-hero {
+                min-height: 70vh;
+                height: 70vh;
+            }
+        }
+        
+        .chasecase-back-link {
+            position: absolute !important;
+            z-index: 10 !important;
+            top: 2rem !important;
+            left: 1.5rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .chasecase-back-link {
+                top: 3rem !important;
+                left: 3rem !important;
+            }
+        }
+        
+        .yl-button-container {
+            position: absolute !important;
+            z-index: 10 !important;
+            top: 2rem !important;
+            right: 1.5rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .yl-button-container {
+                top: 3rem !important;
+                right: 3rem !important;
+            }
+        }
+        
+        .section-body > div:last-child {
+            margin-top: 2rem !important;
+        }
+    </style>
+</head>
+<body class="chasecase-page">
+    <article class="chasecase-article">
+        <!-- Progress Bar -->
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+        <!-- HERO SECTION -->
+        <header class="chasecase-hero">
+            <div class="chasecase-back-link">
+                <a href="index.html#work" class="back-link">
+                    <svg class="icon-arrow-left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"/>
+                        <polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+            
+            <div class="yl-button-container">
+                <a href="index.html" class="center-button" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; backdrop-filter: none; border: none; border-radius: 9999px; color: #000000; opacity: 1; text-decoration: none; font-family: 'Ubuntu Condensed', sans-serif; font-size: 1.125rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1.75rem; height: 1.75rem;">
+                        <path d="M12 2.5C13.5 2.5 14.8 3.5 15.2 4.9C16.6 4.5 18 5.2 18.5 6.6C20 7 20.7 8.5 20.3 9.9C21.4 10.9 21.4 12.6 20.3 13.6C20.7 15 20 16.5 18.6 16.9C18 18.3 16.6 19 15.2 18.6C14.8 20 13.5 21 12 21C10.5 21 9.2 20 8.8 18.6C7.4 19 6 18.3 5.4 16.9C4 16.5 3.3 15 3.7 13.6C2.6 12.6 2.6 10.9 3.7 9.9C3.3 8.5 4 7 5.4 6.6C6 5.2 7.4 4.5 8.8 4.9C9.2 3.5 10.5 2.5 12 2.5ZM12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C13.7 15 15 13.7 15 12C15 10.3 13.7 9 12 9Z" />
+                    </svg>
+                    <span>YL</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="chasecase-content">
+            <!-- OVERVIEW -->
+            <section class="chasecase-section">
+                <div class="section-grid">
+                    <div class="section-header">
+                        <h2 class="section-title" style="font-size: 28px; font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; opacity: 1;">Google</h2>
+                        <p style="font-size: 18px; font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 700; margin-top: 0; margin-bottom: 0; opacity: 0.8; line-height: 1.2;">Mobile IOS</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="overview-paragraphs">
+                            <p>
+                                Through Design Consulting at Cornell, I looked into how to engage college-age users with various Google products. We collected user perceptions through 25 interviews, which informed the idea behind 64+ design interventions.
+                            </p>
+                            <p>
+                                I designed, refined, and tested conceptual interventions based on findings and stakeholder feedback. The refined design interventions and evaluations were presented to cross-functional stakeholders at Google.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- METADATA BAR -->
+        <section class="chasecase-metadata">
+            <div class="metadata-content">
+                <div class="metadata-container">
+                    <div class="metadata-item">
+                        <h4>Role</h4>
+                        <p>Product Designer</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h4>Team</h4>
+                        <p>2 Product Manager<br>5 Product Designers</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h4>Timeline</h4>
+                        <p>12 Weeks<br>Sep-Nov 2025</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h4>Skills/Tools</h4>
+                        <p>Figma<br>User Research<br>Thematic Coding</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sit Tight Section -->
+        <div class="chasecase-content">
+            <div style="margin-top: 2rem; text-align: center; padding: 3rem 2rem; background: rgba(39, 39, 42, 0.3); border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.05); width: 100%; max-width: 1300px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.5rem; color: #e4e4e7; font-family: 'Ubuntu Condensed', sans-serif; margin-bottom: 1rem;">
+                    Sit tight, the case study is coming soon!
+                </p>
+            </div>
+        </div>
+
+    </article>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Yuki. Crafted with ♥ and React.</p>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <a href="index.html" class="footer-link">work</a>
+                    <a href="about.html" class="footer-link">about</a>
+                    <a href="gallery.html" class="footer-link">gallery</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/yuki-li2027/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:yl3644@cornell.edu" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/yyuki.li/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chasecase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

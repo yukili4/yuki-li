@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Yuki Li</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <!-- Left Side: Logo -->
+            <a href="index.html" class="nav-logo-group">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="nav-logo-icon">
+                    <path d="M12 2.5C13.5 2.5 14.8 3.5 15.2 4.9C16.6 4.5 18 5.2 18.5 6.6C20 7 20.7 8.5 20.3 9.9C21.4 10.9 21.4 12.6 20.3 13.6C20.7 15 20 16.5 18.6 16.9C18 18.3 16.6 19 15.2 18.6C14.8 20 13.5 21 12 21C10.5 21 9.2 20 8.8 18.6C7.4 19 6 18.3 5.4 16.9C4 16.5 3.3 15 3.7 13.6C2.6 12.6 2.6 10.9 3.7 9.9C3.3 8.5 4 7 5.4 6.6C6 5.2 7.4 4.5 8.8 4.9C9.2 3.5 10.5 2.5 12 2.5ZM12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C13.7 15 15 13.7 15 12C15 10.3 13.7 9 12 9Z" />
+                </svg>
+                <span class="nav-logo-text">YL</span>
+            </a>
+
+            <!-- Center: Navigation Links -->
+            <div class="nav-center">
+                <a href="index.html" class="nav-link">work</a>
+                <a href="about.html" class="nav-link active">about</a>
+                <a href="gallery.html" class="nav-link">gallery</a>
+            </div>
+
+            <!-- Right Side: Social Icons & Mobile Toggle -->
+            <div class="nav-right">
+                <!-- Social Icons (Desktop) -->
+                <div class="nav-social">
+                    <a href="https://www.linkedin.com/in/yuki-li2027/" target="_blank" rel="noopener noreferrer" class="nav-social-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:yl3644@cornell.edu" class="nav-social-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/yyuki.li/" target="_blank" rel="noopener noreferrer" class="nav-social-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="nav-mobile-toggle" id="mobileMenuToggle">
+                    <svg class="nav-menu-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                    <svg class="nav-close-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="nav-mobile-menu" id="mobileMenu">
+            <div class="nav-mobile-links">
+                <a href="index.html" class="nav-mobile-link">work</a>
+                <a href="about.html" class="nav-mobile-link">about</a>
+                <a href="gallery.html" class="nav-mobile-link">gallery</a>
+            </div>
+            <div class="nav-mobile-divider"></div>
+            <div class="nav-mobile-social">
+                <a href="https://www.linkedin.com/in/yuki-li2027/" target="_blank" rel="noopener noreferrer" class="nav-mobile-social-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="mailto:yl3644@cornell.edu" class="nav-mobile-social-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/yyuki.li/" target="_blank" rel="noopener noreferrer" class="nav-mobile-social-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about" id="about">
+            <div class="about-wrapper">
+                <div class="about-layout">
+                    <!-- Left Col - Photo and Name (Sticky) -->
+                    <div class="about-left">
+                        <div class="about-image-container">
+                            <img src="../Portfolio/self-museum.JPG" alt="Yuki at a museum" class="about-image">
+                        </div>
+                        <h2 class="about-title">yuki /yoo·kee/</h2>
+                        <div class="about-divider"></div>
+                    </div>
+
+                    <!-- Right Col - All Content -->
+                    <div class="about-right">
+                        <p class="about-text about-intro">
+                            Hey there ‧₊˚
+                        </p>
+                        <p class="about-text about-intro">
+                            I'm Yuki, born in Manhattan and now living in the suburbs of Illinois where corn fields thrive. I'm currently a junior at <span class="about-highlight">Cornell University</span> studying Information Science (UX Design + Interactive Tech) along with a minor in game design & fine arts.
+                        </p>
+                        <p class="about-text about-intro">
+                            I am driven by <span class="about-highlight">curiosity</span> and <span class="about-highlight">exploration</span>! I've been at non-profits, startups, and big corporations to create a multitude of unique products. I was previously a Product Design Intern at <span class="about-highlight">JPMorganChase</span>, and on campus I am leading design communities at <span class="about-highlight">Hack4Impact</span> ♡.
+                        </p>
+                        <p class="about-text about-intro">
+                            When I'm not designing, I love listening to j-pop beats from artists like Fuji Kaze and visiting local art museums. Right now, I'm invested with collecting digital cameras, cafe hopping for matchas, and listening to self growth podcasts like JOMO.
+                        </p>
+
+                        <div class="about-grid">
+                            <div class="about-column">
+                                <h3 class="about-column-title">Experience</h3>
+                                <ul class="about-list">
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Product Designer @ Google (DCC)</span>
+                                            <span class="about-list-date">Sep 2025 - Present</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Design Lead @ Hack4Impact</span>
+                                            <span class="about-list-date">Feb 2024 - Present</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Product Design Intern @ JPMorganChase</span>
+                                            <span class="about-list-date">Jun 2025 - Aug 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Product Designer @ Lab of Ornithology</span>
+                                            <span class="about-list-date">Feb 2025 - Jun 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">UX Design Intern @ LePal.ai</span>
+                                            <span class="about-list-date">Sep 2024 - Nov 2024</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Product Designer @ Amplio Network</span>
+                                            <span class="about-list-date">May 2024 - Aug 2024</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="about-column">
+                                <h3 class="about-column-title">Activities</h3>
+                                <ul class="about-list">
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Campus Leader @ Notion</span>
+                                            <span class="about-list-date">Aug 2024 - Present</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Teaching Assistant @ Info 1998 Digital Product Design</span>
+                                            <span class="about-list-date">Feb 2024 - Feb 2025</span>
+                                        </div>
+                                    </li>
+                                    <li class="about-list-item">
+                                        <div class="about-list-content">
+                                            <span class="about-list-role">Fundraising Chair @ Project Hope at Cornell</span>
+                                            <span class="about-list-date">Sep 2023 - May 2025</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="about-grid">
+                            <div class="about-column">
+                                <h3 class="about-column-title">Tools</h3>
+                                <div class="about-skills">
+                                    <span class="about-skill">Advanced Figma</span>
+                                    <span class="about-skill">Adobe Suite</span>
+                                    <span class="about-skill">Procreate</span>
+                                    <span class="about-skill">Aseprite</span>
+                                    <span class="about-skill">HTML/CSS</span>
+                                </div>
+                            </div>
+                            <div class="about-column">
+                                <h3 class="about-column-title">Skills</h3>
+                                <div class="about-skills">
+                                    <span class="about-skill">User Research</span>
+                                    <span class="about-skill">UX Design</span>
+                                    <span class="about-skill">Wireframing</span>
+                                    <span class="about-skill">Prototyping</span>
+                                    <span class="about-skill">Animations</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-column" style="margin-top: 2rem;">
+                            <h3 class="about-column-title">Currently Learning</h3>
+                            <div class="about-skills">
+                                <span class="about-skill">Spline (3D Models)</span>
+                                <span class="about-skill">Video Creation</span>
+                                <span class="about-skill">Character Animation</span>
+                                <span class="about-skill">VR/AR Design</span>
+                                <span class="about-skill">Sound Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Yuki. Crafted with ♥ and React.</p>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <a href="index.html" class="footer-link">work</a>
+                    <a href="about.html" class="footer-link">about</a>
+                    <a href="gallery.html" class="footer-link">gallery</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/yuki-li2027/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:yl3644@cornell.edu" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/yyuki.li/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

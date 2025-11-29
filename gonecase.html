@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gone Astray - Case Study | Yuki Li</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&family=Ubuntu+Condensed&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chasecase.css">
+    <style>
+        .overview-paragraphs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 0 !important;
+            margin-bottom: 2rem;
+            padding-top: 0 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs {
+                gap: 3rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .overview-paragraphs p {
+            font-family: 'Ubuntu Sans', sans-serif;
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 0 !important;
+            margin-bottom: 1rem !important;
+            padding-top: 0 !important;
+            max-width: 100%;
+        }
+        
+        .overview-paragraphs p:last-child {
+            margin-bottom: 0 !important;
+        }
+        
+        .overview-paragraphs p:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs p {
+                max-width: 550px;
+            }
+        }
+        
+        .section-body {
+            color: #ffffff;
+        }
+        
+        .writing {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            position: relative;
+            overflow: visible !important;
+            margin: 0 auto;
+        }
+        
+        .section-grid {
+            display: grid !important;
+            align-items: start !important;
+            justify-items: start !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            text-align: left !important;
+            width: 100% !important;
+            max-width: 1300px !important;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 768px) {
+            .section-grid {
+                grid-template-columns: repeat(12, 1fr) !important;
+                align-items: start !important;
+                justify-items: start !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                text-align: left !important;
+                column-gap: 4rem !important;
+                row-gap: 0 !important;
+                position: relative !important;
+            }
+            
+            .section-header {
+                grid-column: span 3 !important;
+                top: 0 !important;
+                align-self: start !important;
+                justify-self: start !important;
+                display: block !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                padding-right: 2rem !important;
+                text-align: left !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+                height: fit-content !important;
+                overflow: visible !important;
+            }
+            
+            
+            .section-body {
+                grid-column: span 9 !important;
+                align-self: start !important;
+                justify-self: start !important;
+                display: flex !important;
+                flex-direction: column !important;
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                padding-left: 0 !important;
+                text-align: left !important;
+                min-width: 0 !important;
+            }
+        }
+        
+        .gonecase-section .section-title {
+            font-style: normal;
+            font-family: 'Ubuntu Sans', sans-serif;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            line-height: 36px !important;
+            opacity: 1 !important;
+            color: #93C5FD !important;
+        }
+        
+        .writing .section-header h2.section-title {
+            text-transform: uppercase !important;
+            letter-spacing: 0.2em !important;
+            font-size: 0.75rem !important;
+            font-weight: 700 !important;
+            font-family: 'Ubuntu Sans', sans-serif !important;
+            color: rgba(161, 161, 170, 1) !important;
+            line-height: 24px !important;
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .gonecase-section {
+                position: relative !important;
+            }
+            
+            .writing {
+                position: relative !important;
+            }
+            
+            .writing .section-grid {
+                position: relative !important;
+                display: grid !important;
+            }
+            
+            .writing .section-header {
+                align-self: start !important;
+                height: fit-content !important;
+                align-self: flex-start !important;
+            }
+            
+            .writing .section-header h2.section-title {
+                position: -webkit-sticky !important;
+                position: sticky !important;
+                top: 8rem !important;
+                z-index: 10 !important;
+                display: block !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: transparent !important;
+            }
+        }
+        
+        #overview .section-title {
+            color: #ffffff !important;
+        }
+        
+        .overview-paragraphs p:first-child {
+            margin-top: 0 !important;
+            padding-top: 4px !important;
+            line-height: 1.5 !important;
+        }
+        
+        .section-body {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+        }
+        
+        @media (min-width: 768px) {
+            .writing .section-header {
+                display: block !important;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .overview-paragraphs {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+            }
+        }
+        
+        .section-header {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .section-header h2 {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            line-height: 1.5 !important;
+        }
+        
+        .section-header p {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .section-body {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        
+        .section-body > * {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .section-body > div:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .overview-paragraphs {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .overview-paragraphs p:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+        
+        .section-body .overview-paragraphs:first-child {
+            margin-top: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        .section-body > div:last-child {
+            width: 100%;
+            max-width: 100%;
+        }
+        
+        .center-button {
+            opacity: 1 !important;
+            background: transparent !important;
+            color: #ffffff !important;
+            border: none !important;
+        }
+        
+        .center-button:hover {
+            background: transparent !important;
+        }
+        
+        .center-button:hover svg {
+            color: #ffffff !important;
+        }
+        
+        .center-button:hover span {
+            color: #ffffff !important;
+        }
+        
+        .center-button svg {
+            color: #ffffff !important;
+        }
+        
+        .center-button span {
+            color: #ffffff !important;
+        }
+        
+        .gonecase-article {
+            font-family: 'Ubuntu Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+            font-weight: 500 !important;
+            overflow-x: hidden !important;
+            overflow-y: visible !important;
+        }
+        
+        .metadata-item p {
+            font-family: 'Ubuntu Sans', sans-serif !important;
+            font-weight: 500 !important;
+        }
+        
+        .type-name {
+            font-family: 'Ubuntu Sans', sans-serif !important;
+            font-weight: 500 !important;
+        }
+        
+        .back-link {
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border-radius: 9999px !important;
+            padding: 0.75rem 1.5rem !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            backdrop-filter: blur(12px) !important;
+            color: #000000 !important;
+        }
+        
+        .back-link:hover {
+            border-color: rgba(255, 255, 255, 1) !important;
+            background: rgba(255, 255, 255, 1) !important;
+        }
+        
+        .back-link svg {
+            color: #000000 !important;
+        }
+        
+        .back-link span {
+            color: #000000 !important;
+        }
+        
+        .yl-button-container {
+            position: absolute !important;
+            top: 2rem !important;
+            right: 1.5rem !important;
+            z-index: 10 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .yl-button-container {
+                top: 3rem !important;
+                right: 3rem !important;
+            }
+        }
+        
+        .gonecase-content {
+            max-width: 1300px !important;
+            padding-top: 3rem !important;
+            position: relative;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .gonecase-content {
+                padding-top: 4rem !important;
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+        
+        .gonecase-section {
+            position: relative;
+        }
+        
+        .metadata-content {
+            max-width: 1300px !important;
+        }
+        
+        .metadata-item {
+            text-align: left !important;
+            width: 100% !important;
+        }
+        
+        .metadata-item h4 {
+            text-align: left !important;
+        }
+        
+        .metadata-item p {
+            text-align: left !important;
+        }
+        
+        .metadata-content {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+        }
+        
+        .metadata-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 1rem;
+            width: 100%;
+            max-width: 1300px;
+        }
+        
+        @media (min-width: 768px) {
+            .metadata-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem 1rem;
+            }
+        }
+        
+        .section-grid {
+            gap: 0.75rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .section-grid {
+                gap: 1rem !important;
+            }
+        }
+        
+        .gonecase-section {
+            margin-bottom: 0 !important;
+            position: relative !important;
+            padding-bottom: 2rem !important;
+        }
+        
+        .gonecase-content {
+            padding-bottom: 4rem !important;
+            position: relative !important;
+        }
+        
+        .gonecase-article {
+            padding-bottom: 0 !important;
+        }
+        
+        .gonecase-hero {
+            position: relative;
+            min-height: 80vh;
+            height: 80vh;
+            background-image: url('../UX:UI/Gone-A/gone-mobile.png') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-color: #0a0a0a !important;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+        
+        @media (min-width: 768px) {
+            .gonecase-hero {
+                min-height: 90vh;
+                height: 90vh;
+                background-image: url('../UX:UI/Gone-A/gone-a.png') !important;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .gonecase-hero {
+                min-height: 70vh;
+                height: 70vh;
+            }
+        }
+        
+        .gonecase-back-link {
+            position: absolute !important;
+            z-index: 10 !important;
+            top: 2rem !important;
+            left: 1.5rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .gonecase-back-link {
+                top: 3rem !important;
+                left: 3rem !important;
+            }
+        }
+        
+        .section-body > div:last-child {
+            margin-top: 2rem !important;
+        }
+        
+        .impact-section {
+            margin-top: 0.5rem;
+        }
+        
+        .takeaways-section {
+            margin-top: 2rem;
+        }
+        
+        .case-image-container {
+            margin-top: 2rem;
+            width: 100%;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            background: rgba(39, 39, 42, 0.3);
+        }
+        
+        #my-role .case-image-container {
+            border: 2px solid rgba(255, 255, 255, 1) !important;
+        }
+        
+        #my-role .case-image-grid .case-image-container {
+            border: 2px solid rgba(255, 255, 255, 1) !important;
+            margin-top: 0 !important;
+        }
+        
+        .case-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+        
+        .case-image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 0.5rem;
+            padding-top: 0;
+        }
+        
+        .case-image-grid .case-image-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .case-image-grid .case-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (min-width: 768px) {
+            .case-image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .case-image-grid .case-image-container {
+                aspect-ratio: 1.3;
+                min-height: 120px;
+                max-height: 300px;
+            }
+        }
+        
+        .case-video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+            background: rgba(39, 39, 42, 0.3);
+            max-width: 100%;
+        }
+        
+        .case-image-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0.5rem;
+        }
+        
+        .subsection-title {
+            font-family: 'Ubuntu Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 36px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subsection-title:first-child {
+            margin-top: 0 !important;
+        }
+        
+        @media (min-width: 768px) {
+            .section-body > div:first-child .subsection-title:first-child,
+            .section-body > .subsection-title:first-child {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            
+            .section-body > div > .subsection-title:first-child {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+            
+            .writing .section-body > div > .subsection-title:first-child {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+                line-height: 1.5 !important;
+            }
+            
+            .writing .section-header,
+            .writing .section-body {
+                align-items: flex-start !important;
+            }
+        }
+        
+        .takeaway-item {
+            margin: 1.5rem 0 !important;
+            padding: 3.5rem 2rem 0.25rem 2rem !important;
+            background: rgba(168, 85, 247, 0.12) !important;
+            border: 1px solid rgba(168, 85, 247, 0.35) !important;
+            border-radius: 0.5rem !important;
+            transition: all 0.3s ease !important;
+            text-align: left !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        
+        .takeaway-item:nth-child(2),
+        .takeaway-item:nth-child(3) {
+            padding-top: 0.25rem !important;
+        }
+        
+        .takeaway-item:hover {
+            background: rgba(168, 85, 247, 0.18) !important;
+            border-color: rgba(168, 85, 247, 0.45) !important;
+        }
+        
+        .takeaway-text {
+            margin: 0;
+            padding-top: 1.5rem;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.75;
+            font-family: 'Ubuntu Sans', sans-serif;
+            text-align: left;
+        }
+        
+        .takeaway-label {
+            color: #A855F7;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Ubuntu Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="chasecase-page">
+    <article class="gonecase-article">
+        <!-- Progress Bar -->
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+        <!-- HERO SECTION -->
+        <header class="gonecase-hero">
+            <div class="gonecase-back-link">
+                <a href="index.html#work" class="back-link">
+                    <svg class="icon-arrow-left" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"/>
+                        <polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    <span>Back</span>
+                </a>
+            </div>
+            
+            <div class="yl-button-container">
+                <a href="index.html" class="center-button" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background: transparent; backdrop-filter: none; border: none; border-radius: 9999px; color: #ffffff; opacity: 1; text-decoration: none; font-family: 'Ubuntu Condensed', sans-serif; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s ease;">
+                    <svg viewBox="0 0 24 24" fill="currentColor" style="width: 2rem; height: 2rem; color: #ffffff;">
+                        <path d="M12 2.5C13.5 2.5 14.8 3.5 15.2 4.9C16.6 4.5 18 5.2 18.5 6.6C20 7 20.7 8.5 20.3 9.9C21.4 10.9 21.4 12.6 20.3 13.6C20.7 15 20 16.5 18.6 16.9C18 18.3 16.6 19 15.2 18.6C14.8 20 13.5 21 12 21C10.5 21 9.2 20 8.8 18.6C7.4 19 6 18.3 5.4 16.9C4 16.5 3.3 15 3.7 13.6C2.6 12.6 2.6 10.9 3.7 9.9C3.3 8.5 4 7 5.4 6.6C6 5.2 7.4 4.5 8.8 4.9C9.2 3.5 10.5 2.5 12 2.5ZM12 9C10.3 9 9 10.3 9 12C9 13.7 10.3 15 12 15C13.7 15 15 13.7 15 12C15 10.3 13.7 9 12 9Z" />
+                    </svg>
+                    <span style="color: #ffffff;">YL</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="gonecase-content">
+            <!-- OVERVIEW -->
+            <section id="overview" class="gonecase-section">
+                <div class="section-grid">
+                    <div class="section-header">
+                        <h2 class="section-title" style="font-size: 28px; font-family: 'Ubuntu Sans', sans-serif; opacity: 1;">Gone Astray</h2>
+                        <p style="font-size: 18px; font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 700; margin-top: 0; margin-bottom: 0; opacity: 0.8; line-height: 1.2;">Physics Platformer Game</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="overview-paragraphs">
+                            <p>
+                                I created the entire game interface for Gone Astray using Figma, designed animated collectable scraps using Aseprite & Procreate, and made level designs using Tiled.
+                            </p>
+                            <p>
+                                With our cross-functional team, we won the Most Polished Award for our gravity platformer 'Gone Astray' which we presented during a showcase voted by 450+ playtesters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- METADATA BAR -->
+        <section class="chasecase-metadata">
+            <div class="metadata-content">
+                <div class="metadata-container">
+                    <div class="metadata-item">
+                        <h4>Role</h4>
+                        <p>Game Designer<br>UI/UX Designer<br>Artist</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h4>Team</h4>
+                        <p>1 Project Lead<br>4 Game Developers<br>4 Artists/Designers<br>2 Sound Designers</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h4>Timeline</h4>
+                        <p>16 Weeks<br>Jan-May 2025</p>
+                    </div>
+                    <div class="metadata-item">
+                        <h4>Skills/Tools</h4>
+                        <p>Adobe Suite<br>Aseprite<br>Figma<br>Procreate<br>Tiled</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT CONTINUED -->
+        <div class="gonecase-content">
+            <!-- GAME CONTEXT -->
+            <section id="game-context" class="gonecase-section">
+                <div class="writing">
+                    <div class="section-grid">
+                        <div class="section-header">
+                            <h2 class="section-title" style="font-size: 24px; font-family: 'Ubuntu Sans', sans-serif; opacity: 1;">Game Context</h2>
+                        </div>
+                        <div class="section-body">
+                            <h3 class="subsection-title">What is Gone Astray?</h3>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px;">
+                                Drifting in the vast expanse of space, a lone canine astronaut named Laika awakens in the wreckage of their spaceship, thousands of miles from home. To survive, they must traverse the remnants of the ship to reach the damaged escape pod in the docking bay on the other side of the ship. With no supplies but a magnetic suit and their own two legs, they must rely on controlling their distant home world to change the direction of their gravity within the ship. As they navigate through the increasingly damaged sections, Laika must collect scraps to repair the escape pod and slowly piece together the mystery of the wrecked ship.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISPLAY -->
+            <section id="display" class="gonecase-section">
+                <div class="writing">
+                    <div class="section-grid">
+                        <div class="section-header">
+                            <h2 class="section-title" style="font-size: 24px; font-family: 'Ubuntu Sans', sans-serif; opacity: 1;">Display</h2>
+                        </div>
+                        <div class="section-body">
+                            <h3 class="subsection-title">Promotional Video</h3>
+                            <video class="case-video" autoplay loop muted playsinline controls>
+                                <source src="../UX:UI/Gone-A/Gone Astray Trailer copy.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MY ROLE -->
+            <section id="my-role" class="gonecase-section">
+                <div class="writing">
+                    <div class="section-grid">
+                        <div class="section-header">
+                            <h2 class="section-title" style="font-size: 24px; font-family: 'Ubuntu Sans', sans-serif; opacity: 1;">My Role</h2>
+                        </div>
+                        <div class="section-body">
+                            <h3 class="subsection-title">Key Game Elements</h3>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px;">
+                                By the end of our project, we had a total of 8 complete UI screens and 24 levels ranging from easy to hard difficulty. I implemented a variety of important features within each level, such as the ability to track when Laika's gravity gets out of control or creating tilesets to visualize the ship's circumference.
+                            </p>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 1.5rem;">
+                                ✦ Start Menu, Studio Logo
+                            </p>
+                            <div class="case-image-container" style="margin-top: 1rem;">
+                                <img src="../UX:UI/Gone-A/gone-cover.avif" alt="Start Menu, Studio Logo" class="case-image">
+                            </div>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 1.5rem;">
+                                ✦ Level Selection, Orbiting Planets
+                            </p>
+                            <div class="case-image-container" style="margin-top: 1rem;">
+                                <img src="../UX:UI/Gone-A/levels.avif" alt="Level Selection, Orbiting Planets" class="case-image">
+                            </div>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 1.5rem;">
+                                ✦ Level Design, Gravity Timer, Scrap Collection
+                            </p>
+                            <div class="case-image-container" style="margin-top: 1rem;">
+                                <img src="../UX:UI/Gone-A/inlevel.avif" alt="Level Design, Gravity Timer, Scrap Collection" class="case-image">
+                            </div>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 1.5rem;">
+                                ✦ Earth Controller, UI Setting, Minimap
+                            </p>
+                            <div class="case-image-container" style="margin-top: 1rem;">
+                                <img src="../UX:UI/Gone-A/hard-level.avif" alt="Earth Controller, UI Setting, Minimap" class="case-image">
+                            </div>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 1.5rem;">
+                                ✦ Level Design Testing
+                            </p>
+                            <div class="case-image-container" style="margin-top: 1rem;">
+                                <img src="../UX:UI/Gone-A/freeze-level.avif" alt="Level Design Testing" class="case-image">
+                            </div>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 1.5rem; margin-bottom: 0; padding-bottom: 0;">
+                                ✦ Shipwall & Metal Tilesets
+                            </p>
+                            <div class="case-image-grid" style="margin-top: 0px;">
+                                <div class="case-image-container">
+                                    <img src="../UX:UI/Gone-A/shipwalls.webp" alt="Shipwalls" class="case-image">
+                                </div>
+                                <div class="case-image-container">
+                                    <img src="../UX:UI/Gone-A/shipwall2.avif" alt="Shipwall 2" class="case-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAKEAWAYS -->
+            <section id="takeaways" class="gonecase-section takeaways-section">
+                <div class="writing">
+                    <div class="section-grid">
+                        <div class="section-header">
+                            <h2 class="section-title" style="font-size: 24px; font-family: 'Ubuntu Sans', sans-serif; opacity: 1;">Takeaways</h2>
+                        </div>
+                        <div class="section-body">
+                            <h3 class="subsection-title">A Fast, Fulfilling Semester</h3>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px;">
+                                This is one of my proudest projects that I worked on from design to delivery, where I saw many little kids and adults play test Gone Astray from level 1 to level 24 with lots of enthusiasm. During this process, my team definitely encountered many challenges.
+                            </p>
+                            <div class="takeaway-item">
+                                <p class="takeaway-text">
+                                    <strong class="takeaway-label">Time is LIMITED</strong>
+                                    As a semester project, the term 'time-constrained' came to be very true when we had to brainstorm a game concept in February and design + develop the entire game by end of April. This meant that designs needed to be pumped out fast, and some sacrifices needed to be made if it took too long to engineer.
+                                </p>
+                            </div>
+                            <div class="takeaway-item" style="padding-top: 4px !important;">
+                                <p class="takeaway-text">
+                                    <strong class="takeaway-label">Happy Team = Dedicated Collaboration</strong>
+                                    At the beginning of game concepting, my team had many conflicts about picking the right idea and that slowed our progress for two weeks. However, we finally came together to combine both game concepts into a completely new idea that we all approved of, resulting in our dedicated efforts for 'Gone Astray'.
+                                </p>
+                            </div>
+                            <p style="font-family: 'Ubuntu Sans', sans-serif; color: #ffffff; font-weight: 500; font-size: 16px; line-height: 24px; margin-top: 2rem;">
+                                With the many positive comments that we have gotten during playtesting, I look forward to releasing 'Gone Astray' on Steam and transforming it into a mobile gravity game in the near future.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </article>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">© 2025 Yuki. Crafted with ♥ and React.</p>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <a href="index.html" class="footer-link">work</a>
+                    <a href="about.html" class="footer-link">about</a>
+                    <a href="gallery.html" class="footer-link">gallery</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/yuki-li2027/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:yl3644@cornell.edu" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/yyuki.li/" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="chasecase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
