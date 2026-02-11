@@ -8,7 +8,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu+Condensed&family=Hina+Mincho&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .textured-bg {
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+            opacity: 0.1;
+        }
+
+        @keyframes swim {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .swimming-fish {
+            animation: swim 20s linear infinite;
+        }
+
+        .spinning-record {
+            animation: swim 10s linear infinite;
+        }
+
+        .poster-shadow {
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .neon-glow {
+            box-shadow:
+                0 0 12px rgba(255, 255, 255, 0.4),
+                0 0 30px rgba(56, 189, 248, 0.5);
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+        "d3": "https://esm.sh/d3@^7.9.0"
+      }
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -137,7 +183,7 @@
                             When I'm not designing, I love listening to j-pop beats from artists like Fuji Kaze and visiting local art museums. Right now, I'm invested with collecting digital cameras, cafe hopping for matchas, and listening to self growth podcasts like JOMO.
                         </p>
 
-                        <div class="about-grid">
+                        <div class="about-grid" style="margin-top: 2.5rem; column-gap: 3rem;">
                             <div class="about-column">
                                 <h3 class="about-column-title">Experience</h3>
                                 <ul class="about-list">
@@ -180,6 +226,14 @@
                                 </ul>
                             </div>
                             <div class="about-column">
+                                <div class="about-music-visualizer-wrapper" style="margin-top: 0.75rem;">
+                                    <div id="music-visualizer-root" class="about-music-visualizer"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-grid" style="margin-top: 2rem; column-gap: 3rem;">
+                            <div class="about-column">
                                 <h3 class="about-column-title">Activities</h3>
                                 <ul class="about-list">
                                     <li class="about-list-item">
@@ -208,6 +262,16 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="about-column">
+                                <h3 class="about-column-title">Currently Learning</h3>
+                                <div class="about-skills">
+                                    <span class="about-skill">Spline (3D Models)</span>
+                                    <span class="about-skill">Video Creation</span>
+                                    <span class="about-skill">Character Animation</span>
+                                    <span class="about-skill">VR/AR Design</span>
+                                    <span class="about-skill">Sound Design</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="about-grid">
@@ -233,16 +297,6 @@
                             </div>
                         </div>
 
-                        <div class="about-column" style="margin-top: 2rem;">
-                            <h3 class="about-column-title">Currently Learning</h3>
-                            <div class="about-skills">
-                                <span class="about-skill">Spline (3D Models)</span>
-                                <span class="about-skill">Video Creation</span>
-                                <span class="about-skill">Character Animation</span>
-                                <span class="about-skill">VR/AR Design</span>
-                                <span class="about-skill">Sound Design</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -284,6 +338,7 @@
         </div>
     </footer>
 
+    <script type="module" src="visualizer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
